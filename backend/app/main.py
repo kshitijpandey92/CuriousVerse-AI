@@ -77,7 +77,7 @@ Do not invent facts, statistics, quotes, or sources. If a claim is uncertain, qu
                 for part in step.get("content", []):
                     if part.get("type") == "text" and part.get("text"):
                         text_parts.append(part["text"])
-        script_text = "\\n".join(text_parts).strip()
+        script_text = "\n".join(text_parts).strip()
     except (ValueError, AttributeError, TypeError) as exc:
         raise HTTPException(status_code=502, detail="Gemini returned an unreadable response.") from exc
 
