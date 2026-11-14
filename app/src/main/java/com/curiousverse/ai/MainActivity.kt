@@ -171,8 +171,7 @@ private fun StudioScreen(
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text("CREATE WITHOUT LIMITS", color = Color(0xFFC4B5FD), fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.6.sp)
-                Text("Turn curiosity into
-content that clicks.", color = Color.White, fontSize = 29.sp, lineHeight = 34.sp, fontWeight = FontWeight.ExtraBold)
+                Text("Turn curiosity into\\ncontent that clicks.", color = Color.White, fontSize = 29.sp, lineHeight = 34.sp, fontWeight = FontWeight.ExtraBold)
                 Text("Your AI-powered YouTube production workspace.", color = Color(0xFFD5DDF0), fontSize = 14.sp)
             }
         }
