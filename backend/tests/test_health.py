@@ -1,0 +1,21 @@
+from fastapi.testclient import TestClient
+from app.main import app
+
+client = TestClient(app)
+
+
+def test_root_is_online():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json()["status"] == "online"
+
+
+def test_health():
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json()["status"] == "ok"
+
+
+def test_script_rejects_short_topic():
+    response = client.post("/script", json={"topic": "AI"})
+    assert response.status_code == 422
